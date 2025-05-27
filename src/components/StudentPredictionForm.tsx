@@ -167,16 +167,16 @@ const StudentPredictionForm = () => {
   };
 
   return (
-    <div ref={containerRef} className="min-h-screen relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div ref={containerRef} className="min-h-screen relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-blue-100">
       {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-cyan-600/20 animate-pulse"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-200/30 via-blue-100/20 to-blue-300/30 animate-pulse"></div>
       
       {/* Floating Particles */}
       <div className="absolute inset-0 overflow-hidden">
-        {[...Array(50)].map((_, i) => (
+        {[...Array(30)].map((_, i) => (
           <div
             key={i}
-            className="absolute w-2 h-2 bg-cyan-400 rounded-full opacity-30 animate-pulse"
+            className="absolute w-2 h-2 bg-blue-400 rounded-full opacity-40 animate-pulse"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
@@ -188,11 +188,11 @@ const StudentPredictionForm = () => {
       </div>
 
       {/* Sparkle Elements */}
-      {[...Array(8)].map((_, i) => (
+      {[...Array(6)].map((_, i) => (
         <div
           key={i}
           ref={el => sparkleRefs.current[i] = el!}
-          className="absolute text-yellow-300 opacity-60"
+          className="absolute text-blue-500 opacity-60"
           style={{
             left: `${20 + Math.random() * 60}%`,
             top: `${20 + Math.random() * 60}%`,
@@ -205,13 +205,13 @@ const StudentPredictionForm = () => {
       <div className="relative z-10 container mx-auto px-4 py-8">
         {/* Header */}
         <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-3 mb-6 px-6 py-3 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full border border-blue-400/30 backdrop-blur-sm">
-            <GraduationCap className="text-cyan-400" size={32} />
-            <h1 className="text-4xl font-bold bg-gradient-to-r from-cyan-400 via-blue-300 to-purple-400 bg-clip-text text-transparent">
+          <div className="inline-flex items-center gap-3 mb-6 px-6 py-3 bg-white/80 backdrop-blur-sm rounded-full border border-blue-200 shadow-lg">
+            <GraduationCap className="text-blue-600" size={32} />
+            <h1 className="text-4xl font-bold text-blue-900">
               Student Outcome Prediction
             </h1>
           </div>
-          <p className="text-xl text-blue-200 font-medium">
+          <p className="text-xl text-blue-700 font-medium">
             advisor: Ts.Dr.Chee Ken Nee
           </p>
         </div>
@@ -225,26 +225,26 @@ const StudentPredictionForm = () => {
                   key={index}
                   className={`w-4 h-4 rounded-full transition-all duration-300 ${
                     index <= currentSection 
-                      ? 'bg-gradient-to-r from-cyan-400 to-blue-500 shadow-lg shadow-cyan-400/50' 
-                      : 'bg-gray-600'
+                      ? 'bg-blue-600 shadow-lg shadow-blue-600/50' 
+                      : 'bg-blue-200'
                   }`}
                 />
               ))}
             </div>
           </div>
-          <div className="w-full bg-gray-700 rounded-full h-2 overflow-hidden">
+          <div className="w-full bg-blue-100 rounded-full h-2 overflow-hidden">
             <div 
-              className="h-full bg-gradient-to-r from-cyan-400 to-blue-500 transition-all duration-500 shadow-lg shadow-cyan-400/50"
+              className="h-full bg-blue-600 transition-all duration-500 shadow-lg shadow-blue-600/50"
               style={{ width: `${((currentSection + 1) / sections.length) * 100}%` }}
             />
           </div>
         </div>
 
         {/* Form Section */}
-        <Card className="form-section max-w-2xl mx-auto bg-black/40 backdrop-blur-xl border-gray-700/50 shadow-2xl shadow-purple-500/20">
+        <Card className="form-section max-w-2xl mx-auto bg-white/90 backdrop-blur-xl border-blue-200 shadow-2xl shadow-blue-500/20">
           <div className="p-8">
-            <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
-              <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full flex items-center justify-center text-black font-bold">
+            <h2 className="text-2xl font-bold text-blue-900 mb-6 flex items-center gap-3">
+              <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold">
                 {currentSection + 1}
               </div>
               {sections[currentSection].title}
@@ -253,15 +253,15 @@ const StudentPredictionForm = () => {
             <div className="space-y-6">
               {sections[currentSection].fields.map((field) => (
                 <div key={field.key} className="space-y-2">
-                  <Label className="text-gray-300 font-medium">{field.label}</Label>
+                  <Label className="text-blue-800 font-medium">{field.label}</Label>
                   {field.type === 'select' ? (
                     <Select onValueChange={(value) => handleInputChange(field.key, value)}>
-                      <SelectTrigger className="bg-gray-800/50 border-gray-600 text-white focus:border-cyan-400 focus:ring-cyan-400/50 backdrop-blur-sm">
+                      <SelectTrigger className="bg-white/70 border-blue-300 text-blue-900 focus:border-blue-500 focus:ring-blue-500/50 backdrop-blur-sm">
                         <SelectValue placeholder="Select..." />
                       </SelectTrigger>
-                      <SelectContent className="bg-gray-800 border-gray-600">
+                      <SelectContent className="bg-white border-blue-200">
                         {field.options?.map((option) => (
-                          <SelectItem key={option} value={option} className="text-white hover:bg-gray-700">
+                          <SelectItem key={option} value={option} className="text-blue-900 hover:bg-blue-50">
                             {option}
                           </SelectItem>
                         ))}
@@ -274,7 +274,7 @@ const StudentPredictionForm = () => {
                       max={field.max}
                       value={formData[field.key as keyof typeof formData]}
                       onChange={(e) => handleInputChange(field.key, e.target.value)}
-                      className="bg-gray-800/50 border-gray-600 text-white focus:border-cyan-400 focus:ring-cyan-400/50 backdrop-blur-sm transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/20"
+                      className="bg-white/70 border-blue-300 text-blue-900 focus:border-blue-500 focus:ring-blue-500/50 backdrop-blur-sm transition-all duration-300 hover:shadow-lg hover:shadow-blue-400/20"
                       placeholder={`Enter ${field.label.toLowerCase()}`}
                     />
                   )}
@@ -288,7 +288,7 @@ const StudentPredictionForm = () => {
                 onClick={prevSection}
                 disabled={currentSection === 0}
                 variant="outline"
-                className="border-gray-600 text-gray-300 hover:bg-gray-700 disabled:opacity-50"
+                className="border-blue-300 text-blue-700 hover:bg-blue-50 disabled:opacity-50"
               >
                 Previous
               </Button>
@@ -296,7 +296,7 @@ const StudentPredictionForm = () => {
               {currentSection === sections.length - 1 ? (
                 <Button
                   onClick={handlePredict}
-                  className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-bold px-8 shadow-lg shadow-green-500/30 transition-all duration-300 hover:shadow-xl hover:shadow-green-500/40"
+                  className="bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 shadow-lg shadow-blue-500/30 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/40"
                 >
                   <TrendingUp className="mr-2" size={20} />
                   Predict Outcome
@@ -304,7 +304,7 @@ const StudentPredictionForm = () => {
               ) : (
                 <Button
                   onClick={nextSection}
-                  className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold px-8 shadow-lg shadow-cyan-500/30 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/40"
+                  className="bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 shadow-lg shadow-blue-500/30 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/40"
                 >
                   Next
                 </Button>
@@ -315,15 +315,15 @@ const StudentPredictionForm = () => {
 
         {/* Prediction Result */}
         {prediction && (
-          <Card className="prediction-result max-w-xl mx-auto mt-8 bg-gradient-to-r from-green-500/20 to-emerald-500/20 backdrop-blur-xl border-green-400/30 shadow-2xl shadow-green-500/30">
+          <Card className="prediction-result max-w-xl mx-auto mt-8 bg-blue-50/90 backdrop-blur-xl border-blue-300 shadow-2xl shadow-blue-500/30">
             <div className="p-8 text-center">
               <div className="inline-flex items-center gap-3 mb-4">
-                <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full flex items-center justify-center">
+                <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center">
                   <TrendingUp className="text-white" size={24} />
                 </div>
-                <h3 className="text-2xl font-bold text-white">Prediction Result</h3>
+                <h3 className="text-2xl font-bold text-blue-900">Prediction Result</h3>
               </div>
-              <p className="text-3xl font-bold bg-gradient-to-r from-green-400 to-emerald-300 bg-clip-text text-transparent">
+              <p className="text-3xl font-bold text-blue-800">
                 {prediction}
               </p>
             </div>
