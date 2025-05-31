@@ -61,7 +61,12 @@ const Team = () => {
             <p className="text-gray-600 text-sm">Data processing and system integration</p>
           </div>
           <div className="p-4 bg-gradient-to-r from-blue-50 to-white rounded-lg border border-blue-100">
-            <p className="text-gray-700"><strong>Yousaf Sadat</strong></p>
+            <Button variant="link" className="p-0 h-auto text-blue-600 hover:text-blue-800" asChild>
+              <a href="https://www.linkedin.com/in/yousaf-sadat-a4b20b2b3/" target="_blank" className="flex items-center">
+                <strong>Yousaf Sadat</strong>
+                <ExternalLink className="w-4 h-4 ml-1" />
+              </a>
+            </Button>
             <p className="text-gray-600 text-sm">Frontend React Developer</p>
           </div>
         </CardContent>
