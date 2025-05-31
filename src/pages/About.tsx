@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { 
@@ -237,7 +236,7 @@ const About = () => {
             <Card className="backdrop-blur-md bg-white/70 border-blue-200/50 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-[1.02]">
               <CardHeader>
                 <CardTitle className="flex items-center text-2xl text-blue-700">
-                  <UserTie className="w-6 h-6 mr-3 text-blue-500" />
+                  <User className="w-6 h-6 mr-3 text-blue-500" />
                   Supervisor & Advisor
                 </CardTitle>
               </CardHeader>
