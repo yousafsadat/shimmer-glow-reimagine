@@ -60,6 +60,10 @@ const Team = () => {
             </Button>
             <p className="text-gray-600 text-sm">Data processing and system integration</p>
           </div>
+          <div className="p-4 bg-gradient-to-r from-blue-50 to-white rounded-lg border border-blue-100">
+            <p className="text-gray-700"><strong>Yousaf Sadat</strong></p>
+            <p className="text-gray-600 text-sm">Frontend React Developer</p>
+          </div>
         </CardContent>
       </Card>
     </div>
