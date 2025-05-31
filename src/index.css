@@ -99,8 +99,28 @@
     filter: drop-shadow(0 0 10px rgba(59, 130, 246, 0.5));
   }
   
+  .glow-border {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3), 0 0 40px rgba(59, 130, 246, 0.1);
+  }
+  
   .sparkle-animation {
     animation: sparkle 2s ease-in-out infinite;
+  }
+  
+  .twinkle {
+    animation: twinkle 3s ease-in-out infinite;
+  }
+  
+  .floating {
+    animation: floating 6s ease-in-out infinite;
+  }
+  
+  .fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+  
+  .scale-in {
+    animation: scaleIn 0.6s ease-out forwards;
   }
   
   @keyframes sparkle {
@@ -111,6 +131,51 @@
     50% {
       opacity: 1;
       transform: scale(1.2) rotate(180deg);
+    }
+  }
+  
+  @keyframes twinkle {
+    0%, 100% {
+      opacity: 0.2;
+      transform: scale(0.8);
+    }
+    50% {
+      opacity: 0.8;
+      transform: scale(1.2);
+    }
+  }
+  
+  @keyframes floating {
+    0%, 100% {
+      transform: translateY(0px) rotate(0deg);
+    }
+    33% {
+      transform: translateY(-10px) rotate(2deg);
+    }
+    66% {
+      transform: translateY(5px) rotate(-1deg);
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes scaleIn {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
     }
   }
   

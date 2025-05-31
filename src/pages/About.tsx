@@ -17,29 +17,45 @@ const About = () => {
 
       <div className="relative z-10 container mx-auto px-4 py-12 max-w-6xl">
         {/* Header Section */}
-        <PageHeader />
+        <div className="fade-in" style={{ animationDelay: '0.1s' }}>
+          <PageHeader />
+        </div>
 
         <div className="grid gap-8">
           {/* Project Overview */}
-          <ProjectOverview />
+          <div className="fade-in" style={{ animationDelay: '0.2s' }}>
+            <ProjectOverview />
+          </div>
 
           {/* Objectives */}
-          <Objectives />
+          <div className="fade-in" style={{ animationDelay: '0.3s' }}>
+            <Objectives />
+          </div>
 
           {/* Methodology */}
-          <Methodology />
+          <div className="fade-in" style={{ animationDelay: '0.4s' }}>
+            <Methodology />
+          </div>
 
           {/* Features and Data */}
-          <FeaturesAndData />
+          <div className="fade-in" style={{ animationDelay: '0.5s' }}>
+            <FeaturesAndData />
+          </div>
 
           {/* Project Goals */}
-          <ProjectGoals />
+          <div className="fade-in" style={{ animationDelay: '0.6s' }}>
+            <ProjectGoals />
+          </div>
 
           {/* Team Section */}
-          <Team />
+          <div className="fade-in" style={{ animationDelay: '0.7s' }}>
+            <Team />
+          </div>
 
           {/* Contact */}
-          <Contact />
+          <div className="fade-in" style={{ animationDelay: '0.8s' }}>
+            <Contact />
+          </div>
         </div>
       </div>
     </div>

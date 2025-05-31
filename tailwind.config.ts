@@ -109,6 +109,57 @@ export default {
 					'50%': {
 						boxShadow: '0 0 40px rgba(59, 130, 246, 0.8), 0 0 60px rgba(59, 130, 246, 0.3)'
 					}
+				},
+				'sparkle': {
+					'0%, 100%': {
+						opacity: '0.3',
+						transform: 'scale(1) rotate(0deg)'
+					},
+					'50%': {
+						opacity: '1',
+						transform: 'scale(1.2) rotate(180deg)'
+					}
+				},
+				'twinkle': {
+					'0%, 100%': {
+						opacity: '0.2',
+						transform: 'scale(0.8)'
+					},
+					'50%': {
+						opacity: '0.8',
+						transform: 'scale(1.2)'
+					}
+				},
+				'floating': {
+					'0%, 100%': {
+						transform: 'translateY(0px) rotate(0deg)'
+					},
+					'33%': {
+						transform: 'translateY(-10px) rotate(2deg)'
+					},
+					'66%': {
+						transform: 'translateY(5px) rotate(-1deg)'
+					}
+				},
+				'fadeIn': {
+					'from': {
+						opacity: '0',
+						transform: 'translateY(20px)'
+					},
+					'to': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
+				},
+				'scaleIn': {
+					'from': {
+						opacity: '0',
+						transform: 'scale(0.9)'
+					},
+					'to': {
+						opacity: '1',
+						transform: 'scale(1)'
+					}
 				}
 			},
 			animation: {
@@ -116,7 +167,12 @@ export default {
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'shimmer': 'shimmer 2s linear infinite',
 				'float': 'float 3s ease-in-out infinite',
-				'glow': 'glow 2s ease-in-out infinite alternate'
+				'glow': 'glow 2s ease-in-out infinite alternate',
+				'sparkle': 'sparkle 2s ease-in-out infinite',
+				'twinkle': 'twinkle 3s ease-in-out infinite',
+				'floating': 'floating 6s ease-in-out infinite',
+				'fadeIn': 'fadeIn 0.8s ease-out forwards',
+				'scaleIn': 'scaleIn 0.6s ease-out forwards'
 			},
 			backgroundImage: {
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
