@@ -7,7 +7,7 @@ import {
   Settings, 
   Database, 
   Star, 
-  UserTie, 
+  User, 
   Users, 
   Mail,
   ExternalLink,
