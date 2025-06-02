@@ -17,14 +17,14 @@ const Team = () => {
         <CardContent className="space-y-4">
           <div className="p-4 bg-gradient-to-r from-blue-50 to-white rounded-lg border border-blue-100">
             <h4 className="font-semibold text-blue-700 mb-2">Main Supervisor</h4>
-            <p className="text-gray-700"><strong>Dr. Chen Tee</strong></p>
+            <p className="text-gray-700"><strong>Dr. Chee Ken Nee</strong></p>
             <p className="text-gray-600 text-sm">Strategic oversight and expertise in educational analytics</p>
           </div>
           <div className="p-4 bg-gradient-to-r from-blue-50 to-white rounded-lg border border-blue-100">
             <h4 className="font-semibold text-blue-700 mb-2">Advisor</h4>
             <Button variant="link" className="p-0 h-auto text-blue-600 hover:text-blue-800" asChild>
               <a href="https://directory.upsi.edu.my/experts/profile/02E6AC7CD9D14955" target="_blank" className="flex items-center">
-                <strong>Ts.Dr. Chee Ken Nee</strong>
+                <strong>Dr. Chee Ken Nee</strong>
                 <ExternalLink className="w-4 h-4 ml-1" />
               </a>
             </Button>
