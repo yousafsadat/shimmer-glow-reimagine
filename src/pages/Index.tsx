@@ -1,7 +1,7 @@
 
 import StudentPredictionForm from '@/components/StudentPredictionForm';
 import { Button } from '@/components/ui/button';
-import { Info, Brain } from 'lucide-react';
+import { Info, Brain, BarChart3 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Index = () => {
@@ -14,6 +14,12 @@ const Index = () => {
             Student Outcome Prediction
           </h1>
           <div className="flex gap-2">
+            <Button asChild variant="outline" className="border-blue-200 text-blue-700 hover:bg-blue-50">
+              <Link to="/graphs" className="flex items-center">
+                <BarChart3 className="w-4 h-4 mr-2" />
+                Graphs
+              </Link>
+            </Button>
             <Button asChild variant="outline" className="border-blue-200 text-blue-700 hover:bg-blue-50">
               <Link to="/model" className="flex items-center">
                 <Brain className="w-4 h-4 mr-2" />
