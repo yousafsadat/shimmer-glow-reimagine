@@ -212,7 +212,7 @@ const StudentPredictionForm = () => {
             </h1>
           </div>
           <p className="text-xl text-blue-700 font-medium">
-            advisor: Ts.Dr.Chee Ken Nee
+            Advisor: Dr. Chee Ken Nee
           </p>
         </div>
 
